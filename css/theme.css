@@ -1,0 +1,128 @@
+@import url(http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Andale Mono:400,700,400italic,700italic);
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes);
+
+/**
+ * A simple theme for leaflet.js, derived from the simple.css theme for reveal.js. The accent color is darkblue.
+ *
+ * Simple.css theme is Copyright (C) 2012 Owen Versteeg, https://github.com/StereotypicalApps. It is MIT licensed.
+ * reveal.js is Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
+ */
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+* {
+margin: 0;
+}
+
+body {
+  background: white;
+  background-color: white; }
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: normal;
+  text-align: left;
+  letter-spacing: -0.02em;
+  color: #4e5351; }
+
+/*********************************************
+* DIV STYLES
+*********************************************/
+
+.container{
+min-height: 100%;
+height: auto;
+height: 100%;
+margin: 0 auto -4em;
+width: 1020px;
+padding: 0px 100px 0px 100px;
+}
+
+.header{
+width: 1020px;
+margin: auto;
+background: #ffffff;
+text-align: left;
+position: relative;
+padding: 30px 0 30px 0;
+}
+
+.body{
+width: 1020px;
+margin: auto;
+background: #ffffff;
+text-align: left;
+position: relative;
+}
+
+/*********************************************
+* MAP
+*********************************************/
+#map {
+  margin-right:auto;
+  width: 900px;
+  height: 500px;
+  border: 1px solid #ccc;" }
+
+.leaflet-popup-content p{
+  font-size: 15px;
+}
+
+.leaflet-popup-content a {
+  text-decoration: none;
+  color: #093965;
+}
+
+.leaflet-popup-content a:hover{
+  color: silver;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 20px 0;
+  text-align: left;
+  color: #4e5351;
+  font-family: "Arvo", Impact, sans-serif;
+  font-weight: 400;
+  line-height: 1.1em;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  text-shadow: none; }
+
+
+/*********************************************
+ * LINKS
+ *********************************************/
+a{
+font-family: Andale Mono, Courier, monospace;
+font-size: 100%;
+text-decoration: none;
+color: #4e5351;
+}
+
+a:hover{
+color: #4ae0ac;
+text-decoration: none;
+}
+
+/*********************************************
+* FOOTER
+*********************************************/
+.contact img{
+width: 30px;
+margin-top: 10px;
+margin-right: auto;
+margin-bottom: 10px;
+margin-left: auto;
+}
