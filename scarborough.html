@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!--#1 link to your sources -->
+
+<html>
+
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+     <link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="http://leaflet.github.io/Leaflet.markercluster/dist/MarkerCluster.Default.css" />
+  <script src="http://leaflet.github.io/Leaflet.markercluster/dist/leaflet.markercluster-src.js"></script>
+     <script src="mapdata.geojson" type="text/javascript"></script>
+
+<!-- #2 creating css style -->
+
+
+<style type="text/css">
+#map { height: 500px; width:1000px; }
+</style>
+
+
+
+
+
+
+<!-- #3 adding a div container for your map -->
+<div id="map">
+
+
+
+
+
+
+
+
+	<!-- #4 calling the JS script -->
+<script>
+
+var map = L.map('map').setView([43.7, -79.4], 13);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([43.7, -79.4]).addTo(map)
+    .bindPopup('A pretty CSS3 popup. <br> Easily customizable.')
+    .openPopup();
+
+     var markers = L.markerClusterGroup();
+var geoJsonLayer = L.geoJson(mapdata, {
+onEachFeature: function (feature, layer) {
+layer.bindPopup('<p><b>@'+ feature.properties.screen_name +'</b></p><p><a href="'+ feature.properties.url +'" target="_blank">'+ feature.properties.text +'</a></p>');
+}
+});
+markers.addLayer(geoJsonLayer);
+map.addLayer(markers);
+map.fitBounds(markers.getBounds());
+
+</script>
+
+
+
+
+
+
+
+
+
+<!-- #5 closing everything -->
+
+</div>
+    </html>
