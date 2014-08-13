@@ -125,7 +125,8 @@ var mapdata = {
             "type": "Feature",
             "properties": {
                 "Name": "Mount Pleasant Cemetery",
-                "description": null
+                "description": null,
+                "image": "http://www.saraallain.com/img/hydepark.jpg"
             },
             "geometry": {
                 "type": "Point",

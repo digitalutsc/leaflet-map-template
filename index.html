@@ -25,9 +25,18 @@
       <h1>Leaflet.js Map for #digpedutsc</h1>
     </div>
 
-        <div class="body">
-          <h3>Sample data gathered via <a href="https://mapsengine.google.com/map/u/0/edit?mid=zb48ibVhZGh4.kZxzS0JvkYPs"> Google MapsEngine</a></h3>
-        </div>
+    <div class="body">
+      <p>Sample data gathered via <a href="https://mapsengine.google.com/map/u/0/edit?mid=zb48ibVhZGh4.kZxzS0JvkYPs"> Google MapsEngine</a></p>
+      <p>Template created by <a href="http://twitter.com/archivalistic">Sara Allain</a> and <a href="http://twitter.com">Kim Pham</a></p>
+      <br>
+      <p>Helpful links:</p>
+        <ul>
+          <li><a href="http://leafletjs.com/examples.html">Leaflet.js tutorials</a></li>
+          <li><a href="http://geojson.org/">Information about GeoJSON</a></li>
+          <li><a href="http://www.codecademy.com/en/tracks/web">Intros to HTML and CSS</a></li>
+        </ul>
+      <br>
+    </div>
 
   <div id="map"></div>
   <style type="text/css">
@@ -49,7 +58,7 @@
 
       var geoJsonLayer = L.geoJson(mapdata, {
         onEachFeature: function (feature, layer) {
-        layer.bindPopup('<p><b>@'+ feature.properties.screen_name +'</b></p><p><a href="'+ feature.properties.url +'" target="_blank">'+ feature.properties.text +'</a></p>');
+        layer.bindPopup('<p><b>'+ feature.properties.Name +'</b></p><p><img src="'+ feature.properties.image +'" target="_blank">'+'</a></p>');
         }
       });
 

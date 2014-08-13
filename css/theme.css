@@ -19,11 +19,12 @@ margin: 0;
 
 body {
   background: white;
-  background-color: white; }
+  background-color: white;
+  margin: 0px 100px 0px 100px; }
 
 p {
-  font-family: "Lato", sans-serif;
-  font-size: 36px;
+  font-family: "Arvo", Impact, sans-serif;
+  font-size: 20px;
   font-weight: normal;
   text-align: left;
   letter-spacing: -0.02em;
@@ -105,10 +106,11 @@ h6 {
  * LINKS
  *********************************************/
 a{
-font-family: Andale Mono, Courier, monospace;
+font-family: "Lato", Courier, monospace;
 font-size: 100%;
 text-decoration: none;
 color: #4e5351;
+letter-spacing: -0.02em;
 }
 
 a:hover{
